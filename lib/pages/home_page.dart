@@ -58,7 +58,7 @@ class HomePage extends ConsumerWidget {
           padding: const EdgeInsets.all(20.0),
           child: GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
+              crossAxisCount: 2,
               crossAxisSpacing: 20,
               mainAxisSpacing: 20,
               childAspectRatio: 1.1,

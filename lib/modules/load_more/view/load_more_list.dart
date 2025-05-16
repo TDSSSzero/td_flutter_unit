@@ -36,6 +36,12 @@ class _LoadMoreListPageState extends ConsumerState<LoadMoreListPage> {
       ListConfig<TuChongItem>(
         sourceList: _repository,
       itemBuilder: itemBuilder,
+        physics: const FixedOverscrollBouncingScrollPhysics(),
+        padding: const EdgeInsets.all(0.0),
+        extendedListDelegate: ExtendedListDelegate(
+          collectGarbage: (List<int> indexes) {
+          },
+        ),
         ),
       ),
       ));

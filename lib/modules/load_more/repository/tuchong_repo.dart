@@ -7,11 +7,14 @@ import 'package:td_flutter_unit/modules/load_more/repository/tuchong_source.dart
 
 class TuChongRepository extends LoadingMoreBase<TuChongItem>{
 
+  TuChongRepository({this.maxLength = 300});
+
+  int maxLength = 30;
   int _pageIndex = 1;
   bool _hasMore = true;
   bool forceRefresh = false;
   @override
-  bool get hasMore => (_hasMore && length < 30) || forceRefresh;
+  bool get hasMore => (_hasMore && length < maxLength) || forceRefresh;
 
   @override
   Future<bool> refresh([bool clearBeforeRequest = false]) async {
@@ -38,7 +41,7 @@ class TuChongRepository extends LoadingMoreBase<TuChongItem>{
     bool isSuccess = false;
     try {
       //to show loading more clearly, in your app,remove this
-      await Future<void>.delayed(const Duration(seconds: 2));
+      await Future<void>.delayed(const Duration(seconds: 1));
       List<TuChongItem>? feedList;
       
         final Response result =

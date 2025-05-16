@@ -12,11 +12,20 @@ class LoadMorePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return BasePage(
       title: ref.watch(curMenuItemProvider).name,
-      child: Column(
-        children: [
-          ElevatedButton(onPressed: () => context.push(AppRoute.loadMoreList.url),
-          child: Text("list"))
-        ],
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(onPressed: () => context.push(AppRoute.loadMoreList.url),
+            child: Text("list")),
+            ElevatedButton(onPressed: () => context.push(AppRoute.loadMoreGrid.url),
+            child: Text("grid")),
+            ElevatedButton(onPressed: () => context.push(AppRoute.loadMoreSliverList.url),
+            child: Text("sliver list")),
+            ElevatedButton(onPressed: () => context.push(AppRoute.loadMoreSliverGrid.url),
+            child: Text("sliver grid")),
+          ],
+        ),
       ));
   }
 }
