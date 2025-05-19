@@ -1,0 +1,31 @@
+{
+    "salesData": {
+      "annual": [
+        {"year": 2019, "revenue": 1200, "profit": 180, "customers": 450},
+        {"year": 2020, "revenue": 1500, "profit": 225, "customers": 520},
+        {"year": 2021, "revenue": 1850, "profit": 277, "customers": 610},
+        {"year": 2022, "revenue": 2100, "profit": 315, "customers": 730},
+        {"year": 2023, "revenue": 2400, "profit": 360, "customers": 850}
+      ],
+      "monthly": [
+        {"month": 1, "revenue": 180, "orders": 1200, "avgOrderValue": 1500},
+        {"month": 2, "revenue": 160, "orders": 1100, "avgOrderValue": 1455},
+        {"month": 3, "revenue": 200, "orders": 1350, "avgOrderValue": 1481},
+        {"month": 4, "revenue": 210, "orders": 1400, "avgOrderValue": 1500},
+        {"month": 5, "revenue": 230, "orders": 1500, "avgOrderValue": 1533},
+        {"month": 6, "revenue": 250, "orders": 1650, "avgOrderValue": 1515},
+        {"month": 7, "revenue": 220, "orders": 1450, "avgOrderValue": 1517},
+        {"month": 8, "revenue": 240, "orders": 1550, "avgOrderValue": 1548},
+        {"month": 9, "revenue": 260, "orders": 1700, "avgOrderValue": 1529},
+        {"month": 10, "revenue": 280, "orders": 1800, "avgOrderValue": 1556},
+        {"month": 11, "revenue": 300, "orders": 1950, "avgOrderValue": 1538},
+        {"month": 12, "revenue": 350, "orders": 2200, "avgOrderValue": 1591}
+      ],
+      "weekly": [
+        {"week": "W1", "revenue": 42, "visits": 8500, "conversionRate": 2.1},
+        {"week": "W2", "revenue": 45, "visits": 9200, "conversionRate": 2.0},
+        {"week": "W3", "revenue": 48, "visits": 9800, "conversionRate": 2.1},
+        {"week": "W4", "revenue": 45, "visits": 8900, "conversionRate": 2.2}
+      ]
+    }
+  }

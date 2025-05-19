@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class ThemeConfig {
   /// 亮色主题
   static final ThemeData lightTheme = ThemeData(
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
     brightness: Brightness.light,
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: Colors.white,

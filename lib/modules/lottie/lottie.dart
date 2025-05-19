@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lottie/lottie.dart';
 import 'package:td_flutter_unit/modules/base/base_page.dart';
-import 'package:td_flutter_unit/modules/modules.dart';
 import 'package:td_flutter_unit/pages/home_provider.dart';
 
 class LottiePage extends ConsumerStatefulWidget {
@@ -29,9 +28,8 @@ class _LottiePageState extends ConsumerState<LottiePage> with TickerProviderStat
 
 @override
   Widget build(BuildContext context) {
-    MenuItem curMenu = ref.watch(curMenuItemProvider);
     return BasePage(
-      title: curMenu.name, 
+      title: ref.watch(curMenuItemProvider).name, 
     child: Center(
       child: Column(
         children: [

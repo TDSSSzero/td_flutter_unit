@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:td_flutter_unit/modules/modules.dart';
+import 'package:td_flutter_unit/modules/menu_items.dart';
 import 'package:td_flutter_unit/navigation/router/app_route.dart';
 
 // Necessary for code-generation to work

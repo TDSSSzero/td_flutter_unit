@@ -1,7 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:td_flutter_unit/modules/modules.dart';
+import 'package:td_flutter_unit/modules/menu_items.dart';
 import 'package:td_flutter_unit/pages/home_provider.dart';
 
 class HomePage extends ConsumerWidget {
@@ -37,12 +39,6 @@ class HomePage extends ConsumerWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => ref.watch(counterProvider.notifier).increment(),
-        child: Icon(Icons.add),
-        elevation: 8,
-        backgroundColor: Theme.of(context).primaryColor,
-      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -58,7 +54,7 @@ class HomePage extends ConsumerWidget {
           padding: const EdgeInsets.all(20.0),
           child: GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
+              crossAxisCount: Platform.isWindows ? 4 : 2,
               crossAxisSpacing: 20,
               mainAxisSpacing: 20,
               childAspectRatio: 1.1,

@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class BasePage extends StatelessWidget {
   final Widget child;
   final String? title;
-  const BasePage({super.key,required this.child,this.title});
+  final Color? backgroundColor;
+  const BasePage({super.key,required this.child,this.title,this.backgroundColor});
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,

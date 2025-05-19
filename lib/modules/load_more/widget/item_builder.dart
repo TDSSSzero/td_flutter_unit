@@ -239,7 +239,7 @@ Widget buildBottomWidget(TuChongItem item, {bool showAvatar = true}) {
               return null;
             }
             return Image.asset(
-              'assets/avatar.jpg',
+              'assets/dog.png',
             );
           },
         ),

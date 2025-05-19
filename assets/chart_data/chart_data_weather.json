@@ -1,0 +1,31 @@
+{
+    "weatherData": {
+      "annual": [
+        {"year": 2019, "avgTemp": 15.2, "maxTemp": 38, "minTemp": -5, "precipitation": 820},
+        {"year": 2020, "avgTemp": 15.8, "maxTemp": 39, "minTemp": -4, "precipitation": 780},
+        {"year": 2021, "avgTemp": 16.3, "maxTemp": 40, "minTemp": -3, "precipitation": 750},
+        {"year": 2022, "avgTemp": 16.7, "maxTemp": 41, "minTemp": -2, "precipitation": 720},
+        {"year": 2023, "avgTemp": 17.1, "maxTemp": 42, "minTemp": -1, "precipitation": 700}
+      ],
+      "monthly": [
+        {"month": 1, "avgTemp": 3.5, "rainyDays": 12, "sunshineHours": 90},
+        {"month": 2, "avgTemp": 5.0, "rainyDays": 10, "sunshineHours": 110},
+        {"month": 3, "avgTemp": 8.5, "rainyDays": 9, "sunshineHours": 150},
+        {"month": 4, "avgTemp": 13.0, "rainyDays": 8, "sunshineHours": 180},
+        {"month": 5, "avgTemp": 18.0, "rainyDays": 7, "sunshineHours": 210},
+        {"month": 6, "avgTemp": 22.5, "rainyDays": 6, "sunshineHours": 230},
+        {"month": 7, "avgTemp": 25.0, "rainyDays": 5, "sunshineHours": 250},
+        {"month": 8, "avgTemp": 24.5, "rainyDays": 6, "sunshineHours": 240},
+        {"month": 9, "avgTemp": 20.0, "rainyDays": 7, "sunshineHours": 190},
+        {"month": 10, "avgTemp": 14.5, "rainyDays": 9, "sunshineHours": 160},
+        {"month": 11, "avgTemp": 8.0, "rainyDays": 11, "sunshineHours": 100},
+        {"month": 12, "avgTemp": 4.0, "rainyDays": 13, "sunshineHours": 80}
+      ],
+      "weekly": [
+        {"week": "W1", "avgTemp": 2.5, "maxTemp": 6, "minTemp": -1, "precipitation": 15},
+        {"week": "W2", "avgTemp": 3.0, "maxTemp": 7, "minTemp": 0, "precipitation": 12},
+        {"week": "W3", "avgTemp": 4.0, "maxTemp": 8, "minTemp": 1, "precipitation": 10},
+        {"week": "W4", "avgTemp": 4.5, "maxTemp": 9, "minTemp": 2, "precipitation": 8}
+      ]
+    }
+  }

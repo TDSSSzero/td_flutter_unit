@@ -1,0 +1,31 @@
+{
+    "webTrafficData": {
+      "annual": [
+        {"year": 2019, "visits": 1200, "uniqueVisitors": 450, "avgSessionDuration": 2.5},
+        {"year": 2020, "visits": 1800, "uniqueVisitors": 620, "avgSessionDuration": 3.1},
+        {"year": 2021, "visits": 2500, "uniqueVisitors": 850, "avgSessionDuration": 3.8},
+        {"year": 2022, "visits": 3200, "uniqueVisitors": 1100, "avgSessionDuration": 4.2},
+        {"year": 2023, "visits": 4000, "uniqueVisitors": 1350, "avgSessionDuration": 4.5}
+      ],
+      "monthly": [
+        {"month": 1, "visits": 300, "bounceRate": 45, "pagesPerSession": 3.2},
+        {"month": 2, "visits": 280, "bounceRate": 46, "pagesPerSession": 3.1},
+        {"month": 3, "visits": 320, "bounceRate": 44, "pagesPerSession": 3.3},
+        {"month": 4, "visits": 350, "bounceRate": 43, "pagesPerSession": 3.4},
+        {"month": 5, "visits": 370, "bounceRate": 42, "pagesPerSession": 3.5},
+        {"month": 6, "visits": 390, "bounceRate": 41, "pagesPerSession": 3.6},
+        {"month": 7, "visits": 410, "bounceRate": 40, "pagesPerSession": 3.7},
+        {"month": 8, "visits": 430, "bounceRate": 39, "pagesPerSession": 3.8},
+        {"month": 9, "visits": 450, "bounceRate": 38, "pagesPerSession": 3.9},
+        {"month": 10, "visits": 480, "bounceRate": 37, "pagesPerSession": 4.0},
+        {"month": 11, "visits": 520, "bounceRate": 36, "pagesPerSession": 4.1},
+        {"month": 12, "visits": 550, "bounceRate": 35, "pagesPerSession": 4.2}
+      ],
+      "weekly": [
+        {"week": "W1", "visits": 72000, "newVisitorsPercentage": 35, "mobilePercentage": 58},
+        {"week": "W2", "visits": 75000, "newVisitorsPercentage": 36, "mobilePercentage": 59},
+        {"week": "W3", "visits": 78000, "newVisitorsPercentage": 37, "mobilePercentage": 60},
+        {"week": "W4", "visits": 75000, "newVisitorsPercentage": 38, "mobilePercentage": 61}
+      ]
+    }
+  }
