@@ -5,6 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:td_flutter_unit/modules/base/base_page.dart';
 import 'package:td_flutter_unit/modules/chart/model/chart_sales.dart';
 import 'package:td_flutter_unit/modules/chart/provider/chart_provider.dart';
+import 'package:td_flutter_unit/modules/chart/widget/chart_item.dart';
+import 'package:td_flutter_unit/modules/chart/widget/indicator.dart';
 import 'package:td_flutter_unit/utils/ui_util.dart';
 
 class ChartOfSalesPage extends ConsumerStatefulWidget {
@@ -19,25 +21,66 @@ class _ChartOfSalesPageState extends ConsumerState<ChartOfSalesPage> {
   @override
   Widget build(BuildContext context) {
     final salesData = ref.watch(chartSalesProvider).value;
-    return BasePage(child: 
+    return BasePage(
+      title: '销售情况统计',
+      child: 
     Center(
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _buildChartItem(context,_buildLineChart(salesData)),
-            _buildChartItem(context,_buildBarChart(salesData)),
-            _buildChartItem(context,_buildPieChart(salesData)),
+            ChartItem(chartItem: _buildLineChart(salesData)),
+            ChartItem(chartItem:_buildBarChart(salesData)),
+            ChartItem(chartItem: _buildPineArea(salesData)),
           ],
         ),
       ),
     ));
   }
+
+  Widget _buildPineArea(SalesData? salesData){
+    return Row(
+      children: [
+          const SizedBox(
+            height: 18,
+          ),
+          Expanded(child: _buildPieChart(salesData)),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ...List.generate(
+                salesData?.annual?.length ?? 0,
+                (index) => Indicator(
+                  color: _getPieChartColor(index),
+                  text: '${salesData?.annual?[index].year}年',
+                  isSquare: true,
+                )),
+            ],
+          )
+      ],
+    );
+  }
+
+  Color _getPieChartColor(int index){
+    switch (index) {
+      case 0:
+        return Colors.blue;
+      case 1:
+        return Colors.amber;
+      case 2:
+        return Colors.green;
+      case 3:
+        return Colors.red;
+      default:
+        return Colors.grey;
+    }
+  }
   
   int touchedIndex = -1;
   Widget _buildPieChart(SalesData? salesData) {
     // 计算monthly中所有orders的总和
-    final totalOrders = salesData?.monthly?.fold<int>(0, (sum, item) =>sum + (item.orders ?? 0)) ?? 0;
+    final totalCustomers = salesData?.annual?.fold<int>(0, (sum, item) =>sum + (item.customers ?? 0)) ?? 0;
     return PieChart(
       PieChartData(
         pieTouchData: PieTouchData(
@@ -54,16 +97,22 @@ class _ChartOfSalesPageState extends ConsumerState<ChartOfSalesPage> {
                       });
                     },
                   ),
+        borderData: FlBorderData(show: false),
+        sectionsSpace: 0,
+        centerSpaceRadius: 40,
         sections: List.generate(
-          salesData?.monthly?.length ?? 0,
+          salesData?.annual?.length ?? 0,
           (index){
             final isTouched = index == touchedIndex;
             final fontSize = isTouched ? 25.0 : 16.0;
             final radius = isTouched ? 60.0 : 50.0;
+            Color color = _getPieChartColor(index);
+            final value = (salesData?.annual?[index].customers?? 0) / totalCustomers.toDouble();
             return PieChartSectionData(
-            color: Colors.blue,
-            value: (salesData?.monthly?[index].orders?? 0) / totalOrders.toDouble(),
-            title: '${salesData?.monthly?[index].month}月',
+            color: color,
+            value: value,
+            // title: '${salesData?.annual?[index].year}年',
+            title: '${(value * 100).toStringAsFixed(2)}%',
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
@@ -118,17 +167,6 @@ class _ChartOfSalesPageState extends ConsumerState<ChartOfSalesPage> {
       sideTitles: SideTitles(showTitles: false),
     ),
   );
-
-  SizedBox _buildChartItem(BuildContext context,Widget chartItem) {
-    return SizedBox(
-            width: context.screenWidth,
-            height: context.screenHeight * 0.7,
-            child: Padding(
-              padding: const EdgeInsets.all(30.0),
-              child: chartItem,
-            ),
-          );
-  }
 
   LineChart _buildLineChart(SalesData? salesData) {
     return LineChart(

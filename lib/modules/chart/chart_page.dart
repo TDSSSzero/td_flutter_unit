@@ -25,8 +25,8 @@ class _ChartPageState extends ConsumerState<ChartPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TdNavButton(AppRoute.chartOfSales.url,text: "销售统计",),
-            TdNavButton(AppRoute.chartOfWebTraffic.url,text: "网站流量统计",),
-            TdNavButton(AppRoute.chartOfWeather.url,text: "天气统计",),
+            // TdNavButton(AppRoute.chartOfWebTraffic.url,text: "网站流量统计",),
+            // TdNavButton(AppRoute.chartOfWeather.url,text: "天气统计",),
           ],
         ),
       )

@@ -34,6 +34,8 @@ enum AppRoute {
   chartOfWebTraffic('webTrafficChart',url: '/chart/webTrafficChart'),
   chartOfWeather('weatherChart',url: '/chart/weatherChart'),
 
+  signalDemo('signalDemo',url: '/signalDemo'),
+
   lockScreen('lockScreen',url: '/lockScreen'),
   audioPlayer('audioPlayer',url: '/audioPlayer'),
   videoPlayer('videoPlayer',url: '/videoPlayer'),

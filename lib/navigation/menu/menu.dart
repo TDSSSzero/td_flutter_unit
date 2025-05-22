@@ -14,6 +14,7 @@ import 'package:td_flutter_unit/modules/load_more/view/load_more_sliver_grid.dar
 import 'package:td_flutter_unit/modules/load_more/view/load_more_sliver_list.dart';
 import 'package:td_flutter_unit/modules/login/login_page.dart';
 import 'package:td_flutter_unit/modules/lottie/lottie.dart';
+import 'package:td_flutter_unit/modules/signal_demo/signal_demo.dart';
 import 'package:td_flutter_unit/navigation/router/app_route.dart';
 
 
@@ -60,6 +61,12 @@ List<GoRoute> menuRoute = [
     path: AppRoute.calendar.path,
     builder: (context, state) => CalendarPage(),
   ),
+
+    GoRoute(
+    path: AppRoute.signalDemo.path,
+    builder: (context, state) => SignalDemoPage(),
+  ),
+
     GoRoute(
     path: AppRoute.chart.path,
     builder: (context, state) => ChartPage(),

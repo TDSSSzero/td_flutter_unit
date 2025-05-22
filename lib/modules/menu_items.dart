@@ -46,6 +46,13 @@ final List<MenuItem> menuItems = [
     description: "图表组件",
     icon: Icons.bar_chart
   ),
+
+  MenuItem(
+    route: AppRoute.signalDemo,
+    name: "信号状态管理",
+    description: "信号状态管理",
+    icon: Icons.lightbulb
+  ),
 ];
 
 class MenuItem {
