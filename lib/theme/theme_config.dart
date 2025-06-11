@@ -12,7 +12,7 @@ class ThemeConfig {
       backgroundColor: Colors.blue,
       foregroundColor: Colors.white,
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: Colors.white,
       shadowColor: Colors.black.withValues(alpha: 0.2),
     ),
@@ -27,7 +27,7 @@ class ThemeConfig {
       backgroundColor: Colors.grey[850],
       foregroundColor: Colors.white,
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: Colors.grey[850],
       shadowColor: Colors.black.withValues(alpha: 0.3),
     ),

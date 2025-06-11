@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:td_flutter_unit/modules/base/base_page.dart';
+import 'package:td_flutter_unit/pages/base/base_page.dart';
 
 class Error404Page extends StatelessWidget {
   const Error404Page({super.key});

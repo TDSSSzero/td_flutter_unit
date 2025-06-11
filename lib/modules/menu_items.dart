@@ -3,17 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:td_flutter_unit/navigation/router/app_route.dart';
 
 final List<MenuItem> menuItems = [
+
   MenuItem(
-    route: AppRoute.lottie,
-    name: "lottie动画",
-    description: "Lottie动画示例",
-    icon: Icons.animation
+      route: AppRoute.learn,
+      name: "学习",
+      description: "学习测试",
+      icon: Icons.hardware_outlined
   ),
   MenuItem(
-    route: AppRoute.heroDemo,
-    name: "hero动画",
-    description: "hero动画",
-    icon: Icons.waves
+    route: AppRoute.animations,
+    name: "动画",
+    description: "动画示例",
+    icon: Icons.animation
   ),
   MenuItem(
     route: AppRoute.loadMore,

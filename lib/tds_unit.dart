@@ -6,6 +6,7 @@ import 'package:td_flutter_unit/navigation/router/app_route.dart';
 import 'package:td_flutter_unit/navigation/router/app_router.dart';
 import 'package:td_flutter_unit/theme/theme_config.dart';
 import 'package:td_flutter_unit/theme/theme_provider.dart';
+import 'package:td_flutter_unit/utils/global_timer.dart';
 import 'package:td_flutter_unit/utils/screen_util.dart';
 
 /// author TDSSS
@@ -26,6 +27,19 @@ class _TDUnitState extends State<TDUnit> {
       router.go(AppRoute.globalError.url, extra: state.uri.toString());
     },
   );
+
+  @override
+  void initState() {
+    GlobalTimer().start();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    GlobalTimer().stop();
+    GlobalTimer().dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,4 +63,5 @@ class _TDUnitState extends State<TDUnit> {
       },
     );
   }
+
 }
